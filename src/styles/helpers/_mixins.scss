@@ -1,0 +1,10 @@
+@mixin buttonStyleNone {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+@mixin montserratBold {
+  font-family: Montserrat, sans-serif;
+  font-weight: 700;
+}

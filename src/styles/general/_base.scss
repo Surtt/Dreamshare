@@ -1,0 +1,25 @@
+:root {
+  font-size: 0.875rem;
+  box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  color: $primary-color;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  max-width: 300px;
+}

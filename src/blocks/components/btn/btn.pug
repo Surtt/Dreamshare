@@ -1,0 +1,8 @@
+mixin btn(type, text)
+  button.btn(class=`btn--${type}`)= text
+
+mixin btn-a(link, text, modify)
+  if modify
+    a.btn(class=`btn--${modify}`, href=link)= text
+  else
+    a.btn(href=link)= text

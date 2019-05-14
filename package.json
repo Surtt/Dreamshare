@@ -17,9 +17,8 @@
     "gulp-sass": "^4.0.2",
     "gulp-svgstore": "^7.0.1",
     "gulp-webp": "^4.0.1",
-    "node-normalize-scss": "^8.0.0",
     "stylelint": "^10.0.1",
-    "stylelint-scss": "^3.6.1"
+    "stylelint-config-standard": "^18.3.0"
   },
   "scripts": {
     "stylelint": "stylelint 'src/styles/**/*.scss' --syntax scss",
