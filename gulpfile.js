@@ -3,6 +3,7 @@
 const gulp = require('gulp');
 const pug = require('gulp-pug');
 const sass = require('gulp-sass');
+const sourcemaps = require('gulp-sourcemaps');
 const plumber = require('gulp-plumber');
 const autoprefixer = require('gulp-autoprefixer');
 const minify = require('gulp-csso');
@@ -25,9 +26,11 @@ gulp.task('pug', function() {
 gulp.task('style', function() {
   return gulp.src('src/styles/style.scss')
     .pipe(plumber())
+    .pipe(sourcemaps.init())
     .pipe(sass())
     .pipe(autoprefixer())
     .pipe(minify())
+    .pipe(sourcemaps.write())
     .pipe(rename('style.min.css'))
     .pipe(gulp.dest('build/css'))
     .pipe(server.stream());
@@ -40,7 +43,7 @@ gulp.task('images', function() {
     imagemin.jpegtran({progressive: true}),
     imagemin.svgo()
   ]))
-  .pipe(gulp.dest('src/img'));
+  .pipe(gulp.dest('build/img'));
 });
 
 gulp.task('webp', function() {

@@ -1,0 +1,48 @@
+.step {
+  background-image: url(../img/step-1.jpg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.step:nth-of-type(2) {
+  background-image: url(../img/step-2.jpg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.step:last-of-type {
+  background-image: url(../img/step-3.jpg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.step:not(:last-of-type) {
+  margin-bottom: 0.7142em;
+}
+
+.step__wrapper {
+  padding-top: 4.6428em;
+  padding-bottom: 1.1428em;
+  padding-left: 1.4285em;
+}
+
+
+.step__number {
+  padding: 0.5em;
+  width: 7em;
+  font-family: Montserrat, sans-serif;
+  font-size: 0.7142rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background-color: $btn-color;
+  border-radius: 4em;
+}
+
+.step__title {
+  margin-top: 0.625em;
+  margin-bottom: 0.4166em;
+  font-family: Montserrat, sans-serif;
+  font-size: 1.7142rem;
+  font-weight: 700;
+}
