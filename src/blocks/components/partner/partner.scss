@@ -1,0 +1,55 @@
+.partner {
+  margin-bottom: 1.1428em;
+  text-align: center;
+}
+
+.partner:last-of-type {
+  margin-bottom: 2.5714em;
+}
+
+.partner__icon-wrapper {
+  position: relative;
+  width: 8.5714em;
+  height: 8.5714em;
+  margin: 0 auto;
+  margin-bottom: 1.2142em;
+}
+
+.partner__img {
+  border-radius: 50%;
+}
+
+.partner__icon-circle {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 2.2857em;
+  height: 2.2857em;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px $primary-color;
+
+  @each $theme, $color in $partners-icons-color {
+    &--#{$theme} {
+      background-color: $color;
+    }
+  }
+}
+
+.partner__icon {
+  width: 1.1428em;
+  height: 1.1428em;
+  fill: $primary-color;
+  transform: translateY(50%);
+}
+
+.partner__name {
+  margin-bottom: 0.8571em;
+  font-family: Montserrat, sans-serif;
+  font-weight: 700;
+  color: $tertiary-color;
+}
+
+.partner__info {
+  font-weight: 300;
+  color: $secondary-color;
+}

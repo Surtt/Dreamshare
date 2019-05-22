@@ -6,6 +6,7 @@
   color: $primary-color;
   border-radius: 2.8571em;
   background-color: $btn-color;
+  text-align: center;
   text-decoration: none;
 
   &--signup {
@@ -14,5 +15,11 @@
     padding: 0.64em 1.2142em;
     font-weight: 300;
     border: solid 2px $primary-color;
+  }
+
+  &--other-partners {
+    color: $btn-color;
+    background-color: transparent;
+    border: 2px solid $btn-color;
   }
 }

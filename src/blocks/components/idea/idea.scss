@@ -1,0 +1,24 @@
+.idea {
+  flex: 1 1 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.7142em;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  border-radius: 4px;
+
+  @each $theme, $idea in $ideas {
+    &--#{$theme} {
+      background-image: linear-gradient(to bottom, rgba($black-color, 0.2), rgba($black-color, 0.2)), $idea;
+    }
+  }
+}
+
+.idea__title {
+  font-family: Montserrat, sans-serif;
+  font-size: 1.5714rem;
+  font-weight: 700;
+  text-align: center;
+}

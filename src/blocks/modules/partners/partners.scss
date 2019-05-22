@@ -1,0 +1,11 @@
+.partners {
+  margin: 0 auto;
+  max-width: 280px;
+  margin-bottom: 2.5714em;
+}
+
+.partners__title {
+  @include titleDefault;
+
+  margin-bottom: 0.6818em;
+}

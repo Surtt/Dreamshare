@@ -1,4 +1,37 @@
-$primary-color: #ffffff;
-$secondary-color: #666666;
-$tertiary-color: #444444;
+// UI Colors
+$primary-color: #fff;
+$black-color: #000;
+$secondary-color: #666;
+$tertiary-color: #444;
 $btn-color: #ff4e50;
+$sun-color: #ffa710;
+$java-color: #19d4ca;
+$cornflower-blue-color: #667df3;
+
+// UI Colors Map
+$partners-icons-color: (
+  music: $btn-color,
+  photo: $sun-color,
+  brush: $java-color,
+  plane: $cornflower-blue-color
+);
+
+// Ideas URL's
+$idea-1: url(../img/idea1.jpg);
+$idea-2: url(../img/idea2.jpg);
+$idea-3: url(../img/idea3.jpg);
+$idea-4: url(../img/idea4.jpg);
+$idea-5: url(../img/idea5.jpg);
+$idea-6: url(../img/idea6.jpg);
+$idea-7: url(../img/idea7.jpg);
+
+// Ideas Map
+$ideas: (
+  sports: $idea-1,
+  health: $idea-2,
+  expeditions: $idea-3,
+  games: $idea-4,
+  culture: $idea-5,
+  relaxation: $idea-6,
+  trevelling: $idea-7
+);

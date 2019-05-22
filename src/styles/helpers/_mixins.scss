@@ -8,3 +8,11 @@
   font-family: Montserrat, sans-serif;
   font-weight: 700;
 }
+
+@mixin titleDefault {
+  font-family: Montserrat, sans-serif;
+  font-size: 1.5714rem;
+  font-weight: 700;
+  color: $tertiary-color;
+  text-align: center;
+}

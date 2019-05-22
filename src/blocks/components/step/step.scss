@@ -1,19 +1,31 @@
 .step {
-  background-image: url(../img/step-1.jpg);
+  flex: 1 1 240px;
+  max-width: 377px;
+  margin: 0 auto;
+  background-image: url(../img/step1.jpg);
   background-repeat: no-repeat;
   background-position: 0 0;
+  border-radius: 4px;
 }
 
 .step:nth-of-type(2) {
-  background-image: url(../img/step-2.jpg);
+  flex: 1 1 240px;
+  max-width: 377px;
+  margin: 0 auto;
+  background-image: url(../img/step2.jpg);
   background-repeat: no-repeat;
   background-position: 0 0;
+  border-radius: 4px;
 }
 
 .step:last-of-type {
-  background-image: url(../img/step-3.jpg);
+  flex: 1 1 240px;
+  max-width: 377px;
+  margin: 0 auto;
+  background-image: url(../img/step3.jpg);
   background-repeat: no-repeat;
   background-position: 0 0;
+  border-radius: 4px;
 }
 
 .step:not(:last-of-type) {
@@ -21,11 +33,9 @@
 }
 
 .step__wrapper {
-  padding-top: 4.6428em;
-  padding-bottom: 1.1428em;
-  padding-left: 1.4285em;
+  margin: 0 auto;
+  padding: 4.6428em 1.4285em 1.9285em;
 }
-
 
 .step__number {
   padding: 0.5em;
@@ -45,4 +55,8 @@
   font-family: Montserrat, sans-serif;
   font-size: 1.7142rem;
   font-weight: 700;
+}
+
+.step__description {
+  font-weight: 300;
 }

@@ -1,11 +1,9 @@
-.steps {
+.ideas {
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
-  margin-bottom: 2.5em;
 }
 
-.steps__title {
+.ideas__title {
   @include titleDefault;
 
   margin-bottom: 0.6818em;

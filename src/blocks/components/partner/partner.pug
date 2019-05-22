@@ -1,0 +1,8 @@
+mixin partner(imgLink, alt, name, info, iconName, modify)
+  .partner
+    .partner__icon-wrapper
+      img(class='partner__img' src=imgLink alt=alt)
+      .partner__icon-circle(class=`partner__icon-circle--${modify}`)
+        +icon(iconName, 'partner__icon')
+    p.partner__name=name
+    p.partner__info=info

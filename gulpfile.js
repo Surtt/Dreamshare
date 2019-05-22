@@ -8,10 +8,14 @@ const plumber = require('gulp-plumber');
 const autoprefixer = require('gulp-autoprefixer');
 const minify = require('gulp-csso');
 const rename = require('gulp-rename');
-var imagemin = require("gulp-imagemin");
-var webp = require("gulp-webp");
-var svgstore = require("gulp-svgstore");
-var del = require('del');
+const imagemin = require("gulp-imagemin");
+const webp = require("gulp-webp");
+const svgstore = require("gulp-svgstore");
+const del = require('del');
+const svgSprite = require('gulp-svg-sprite');
+const svgmin = require('gulp-svgmin');
+const cheerio = require('gulp-cheerio');
+const replace = require('gulp-replace');
 const server = require('browser-sync').create();
 
 gulp.task('pug', function() {
@@ -53,13 +57,40 @@ gulp.task('webp', function() {
 });
 
 gulp.task('sprite', function() {
-  return gulp.src('src/img/*.svg')
-  .pipe(svgstore({
-    inlineSvg: true
-  }))
-  .pipe(rename('sprite.svg'))
-  .pipe(gulp.dest('build/img'));
+  return gulp.src('src/img/**/*.svg')
+      .pipe(svgmin({
+          js2svg: {
+              pretty: true
+          }
+      }))
+      .pipe(cheerio({
+          run: function ($) {
+              $('[fill]').removeAttr('fill');
+              $('[stroke]').removeAttr('stroke');
+              $('[style]').removeAttr('style');
+          },
+          parserOptions: {xmlMode: true}
+      }))
+      .pipe(replace('&gt;', '>'))
+      .pipe(svgSprite({
+          mode: {
+              symbol: {
+                  sprite: "sprite.svg"
+              }
+          }
+      }))
+      .pipe(gulp.dest('build/img/svg'));
 });
+
+
+// gulp.task('sprite', function() {
+//   return gulp.src('src/img/**/*.svg')
+//   .pipe(svgstore({
+//     inlineSvg: true
+//   }))
+//   .pipe(rename('sprite.svg'))
+//   .pipe(gulp.dest('build/img/svg'));
+// });
 
 gulp.task('serve', function() {
   server.init({

@@ -5,4 +5,4 @@ mixin btn-a(link, text, modify)
   if modify
     a.btn(class=`btn--${modify}`, href=link)= text
   else
-    a.btn(href=link)(class!=attributes.class)= text
+    a.btn(href=link class!=attributes.class)= text
