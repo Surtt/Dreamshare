@@ -1,0 +1,77 @@
+.holiday {
+  margin: 0 auto;
+  padding-bottom: 2.8571em;
+
+  @include respond('medium') {
+    max-width: 492px;
+    padding-bottom: 7.1428em;
+  }
+}
+
+.holiday__title {
+  @include titleDefault;
+
+  margin-bottom: 0.6818em;
+
+  @include respond('medium') {
+    margin-bottom: 2.0454em;
+  }
+}
+
+.holiday__text {
+  margin-bottom: 0.8333em;
+  font-size: 1.2857rem;
+  font-weight: 300;
+  color: $secondary-color;
+  text-align: center;
+
+  @include respond('medium') {
+    margin-bottom: 1.3888em;
+  }
+}
+
+.holiday__form-wrapper {
+  @include respond('medium') {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.holiday__form {
+  margin: 0 auto;
+  max-width: 280px;
+
+  @include respond('medium') {
+    flex: 1 1 300px;
+    max-width: 300px;
+    margin: 0;
+  }
+}
+
+.holiday__input {
+  width: 100%;
+  height: 2.8571em;
+  margin-bottom: 0.7142em;
+  padding-left: 1.0714em;
+  font-weight: 300;
+  color: $dark-grey-color;
+  background-color: $primary-color;
+  border: 1px solid $grey-color;
+  border-radius: 0.2142em;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.07);
+
+  @include respond('medium') {
+    margin-bottom: 0;
+  }
+}
+
+.holiday__btn {
+  margin: 0 auto;
+  max-width: 280px;
+
+  @include respond('medium') {
+    margin: 0;
+    flex: 1 1 180px;
+    max-width: 180px;
+  }
+}

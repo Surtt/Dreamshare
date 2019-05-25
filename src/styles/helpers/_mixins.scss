@@ -16,3 +16,13 @@
   color: $tertiary-color;
   text-align: center;
 }
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == 'medium' {
+    @media (min-width: 48em) { @content; }
+  }
+
+  @if $breakpoint == 'large' {
+    @media (min-width: 60em) { @content; }
+  }
+}

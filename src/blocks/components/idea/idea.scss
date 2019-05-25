@@ -14,6 +14,18 @@
       background-image: linear-gradient(to bottom, rgba($black-color, 0.2), rgba($black-color, 0.2)), $idea;
     }
   }
+
+  @include respond('medium') {
+    margin-bottom: 0;
+
+    &--culture {
+      grid-column: 2 / span 2;
+    }
+
+    &--relaxation {
+      grid-column: 1 / span 2;
+    }
+  }
 }
 
 .idea__title {
@@ -21,4 +33,8 @@
   font-size: 1.5714rem;
   font-weight: 700;
   text-align: center;
+
+  @include respond('medium') {
+    padding: 5.909em 0.4545em;
+  }
 }

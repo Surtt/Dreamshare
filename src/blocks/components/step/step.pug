@@ -1,5 +1,5 @@
-mixin step(numberStep, title, description)
-  .step
+mixin step(numberStep, title, description, modify)
+  .step(class=`step--${modify}`)
     .step__wrapper
       .step__number=numberStep
       h3.step__title=title

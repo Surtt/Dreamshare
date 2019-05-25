@@ -1,8 +1,10 @@
 // UI Colors
 $primary-color: #fff;
-$black-color: #000;
 $secondary-color: #666;
 $tertiary-color: #444;
+$black-color: #000;
+$grey-color: #d4d4d4;
+$dark-grey-color: #999;
 $btn-color: #ff4e50;
 $sun-color: #ffa710;
 $java-color: #19d4ca;
@@ -14,6 +16,18 @@ $partners-icons-color: (
   photo: $sun-color,
   brush: $java-color,
   plane: $cornflower-blue-color
+);
+
+// Steps URL's
+$step-1: url(../img/step-1.jpg);
+$step-2: url(../img/step-2.jpg);
+$step-3: url(../img/step-3.jpg);
+
+// Steps Map
+$steps: (
+  first: $step-1,
+  second: $step-2,
+  third: $step-3
 );
 
 // Ideas URL's

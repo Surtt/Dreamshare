@@ -1,10 +1,21 @@
 .partner {
   margin-bottom: 1.1428em;
   text-align: center;
+
+  @include respond('medium') {
+    flex: 1 1 236px;
+    margin-bottom: 2.5em;
+  }
+
+  @include respond('large') {
+    margin-bottom: 0;
+  }
 }
 
-.partner:last-of-type {
-  margin-bottom: 2.5714em;
+.partner:not(:last-of-type) {
+  @include respond('large') {
+    margin-right: 1.4285em;
+  }
 }
 
 .partner__icon-wrapper {

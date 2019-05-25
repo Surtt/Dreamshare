@@ -1,6 +1,7 @@
 block content
   section.steps
     h2.steps__title How Dreamshare works?
-    +step('Step 1', 'Sed leo enim, condimentum', 'Quisque libero libero, dictum non turpis in, luctus semper lorem. Donec rhoncus a leo sit amet facilisis.')
-    +step('Step 2', 'Morbi velit risus', 'Nulla venenatis tempor dui in molestie. Nulla quis dictum purus, sit amet porttitor est.')
-    +step('Step 3', 'Sed leo enim, condimentum', 'Quisque libero libero, dictum non turpis in, luctus semper lorem. Donec rhoncus a leo sit amet facilisis.')
+    .steps__wrapper
+      +step('Step 1', 'Sed leo enim, condimentum', 'Quisque libero libero, dictum non turpis in, luctus semper lorem. Donec rhoncus a leo sit amet facilisis.', 'first')
+      +step('Step 2', 'Morbi velit risus', 'Nulla venenatis tempor dui in molestie. Nulla quis dictum purus, sit amet porttitor est.', 'second')
+      +step('Step 3', 'Sed leo enim, condimentum', 'Quisque libero libero, dictum non turpis in, luctus semper lorem. Donec rhoncus a leo sit amet facilisis.', 'third')

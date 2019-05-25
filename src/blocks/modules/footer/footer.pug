@@ -1,0 +1,13 @@
+footer.footer
+  .footer__wrapper
+    .footer__logo Dreamshare
+    ul.footer__menu
+      p.footer__menu-name Company
+      each val in [{link: '#', name: 'About'}, {link: '#', name: 'Contact'}, {link: '#', name: 'Press'}, {link: '#', name: 'Blog'}, {link: '#', name: 'Terms and Privacy'}, {link: '#', name: 'Help'}]
+        li.footer__item
+          a.footer__link(href=val.link)=val.name
+    ul.footer__menu
+      p.footer__menu-name Partners
+      each val in [{link: '#', name: 'Mdalen'}, {link: '#', name: 'Loos'}, {link: '#', name: 'Press Type'}, {link: '#', name: 'Blotloon'}, {link: '#', name: 'Woodline'}, {link: '#', name: 'Held'}]
+        li.footer__item
+          a.footer__link(href=val.link)=val.name

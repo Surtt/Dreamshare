@@ -1,40 +1,43 @@
 .step {
   flex: 1 1 240px;
-  max-width: 377px;
-  margin: 0 auto;
-  background-image: url(../img/step1.jpg);
   background-repeat: no-repeat;
-  background-position: 0 0;
+  background-size: cover;
+  background-position: 50% 50%;
   border-radius: 4px;
-}
 
-.step:nth-of-type(2) {
-  flex: 1 1 240px;
-  max-width: 377px;
-  margin: 0 auto;
-  background-image: url(../img/step2.jpg);
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  border-radius: 4px;
-}
+  @each $theme, $step in $steps {
+    &--#{$theme} {
+      background-image: linear-gradient(to bottom, rgba($black-color, 0.2), rgba($black-color, 0.2)), $step;
+    }
+  }
 
-.step:last-of-type {
-  flex: 1 1 240px;
-  max-width: 377px;
-  margin: 0 auto;
-  background-image: url(../img/step3.jpg);
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  border-radius: 4px;
+  @include respond ('medium') {
+    &:not(:last-of-type) {
+      margin-right: 1.4285em;
+    }
+  }
 }
 
 .step:not(:last-of-type) {
   margin-bottom: 0.7142em;
+
+  @include respond ('medium') {
+    margin-bottom: 0;
+  }
 }
 
 .step__wrapper {
   margin: 0 auto;
   padding: 4.6428em 1.4285em 1.9285em;
+
+  @include respond ('medium') {
+    padding-top: 14.6428em;
+    padding-bottom: 2.2857em;
+  }
+
+  @include respond ('large') {
+    padding-top: 15.7142em;
+  }
 }
 
 .step__number {

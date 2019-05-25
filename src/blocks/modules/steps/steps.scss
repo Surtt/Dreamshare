@@ -1,12 +1,27 @@
 .steps {
-  display: flex;
-  flex-direction: column;
   margin: 0 auto;
   margin-bottom: 2.5em;
+
+  @include respond('medium') {
+    margin-bottom: 6.7857em;
+  }
 }
 
 .steps__title {
   @include titleDefault;
 
   margin-bottom: 0.6818em;
+
+  @include respond('medium') {
+    margin-bottom: 1.5909em;
+  }
+}
+
+.steps__wrapper {
+  display: flex;
+  flex-direction: column;
+
+  @include respond('medium') {
+    flex-direction: row;
+  }
 }
