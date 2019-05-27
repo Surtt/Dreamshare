@@ -6,14 +6,17 @@
   background-repeat: no-repeat;
   background-position: 50% 0;
 
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    background-image: url(../img/header-bg@2x.jpg);
+  }
+
   @include respond('medium') {
     margin-bottom: 6.7857em;
     background-image: url(../img/header-bg-big.jpg);
-    background-size: auto;
-  }
 
-  @include respond('large') {
-    background-size: cover;
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      background-image: url(../img/header-bg-big@2x.jpg);
+    }
   }
 }
 
