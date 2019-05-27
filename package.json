@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "tar": "^2.2.2"
+  },
   "devDependencies": {
     "browser-sync": "^2.26.5",
     "del": "^4.1.1",
